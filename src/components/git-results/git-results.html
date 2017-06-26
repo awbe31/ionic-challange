@@ -1,0 +1,43 @@
+
+<ion-content>
+  <!--Tool bar for user interaction/navigation -->
+  <ion-toolbar color="secondary">
+  <!-- using ngController, this will take users back to search screen -->
+    <ion-buttons left>
+        <button ion-button icon-only color="white" (click)="gitSearch()">
+          <ion-icon name="search"></ion-icon>
+        </button>
+    </ion-buttons>
+  <!-- run the bookmark/save user function -->
+  </ion-toolbar>
+  <!--using the Ionic Grid to layout the results evenly-->
+  <ion-grid class="gitUserGrid">
+    <ion-row >
+      <ion-col col-12 class="gitUserBlock" >
+  <!-- looping through data from intial API call -->
+        <ion-item *ngFor="let item of gitData" text-center>
+          <img class="circle" src="{{item.avatar_url}}">
+          <h1 class="gitUserName">{{item.login}} </h1>
+          <p class="gitUserLocation"> {{item.company}} | {{item.location}}</p>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12>
+  <!-- ionic cards that display Public Repo information -->
+        <ion-card class="gitRepo">
+          <ion-card-header class="gitRepoHeader">
+            Public Repos
+          </ion-card-header>
+          <ion-list>
+  <!-- looping through data from repo API call -->
+            <ion-item ion-item *ngFor="let item of gitRepoData" class="gitRepoData">
+              <h2 text-uppercase>{{item.name}} | {{item.language}}</h2>
+              <p text-wrap>{{item.description}}
+            </ion-item>
+          </ion-list>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

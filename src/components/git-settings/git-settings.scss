@@ -1,0 +1,19 @@
+git-settings {
+//grid settings for userProfile 
+.gitUserGrid{
+        padding: 0px;
+}
+.gitUserBlock{
+        background: color($colors, secondary);
+        padding:0px;
+}
+.gitsettingsHeader{
+        background: color($colors, dark);
+        color: color($colors, white);
+        font-size: 20px;
+        font-weight: 400;
+    }
+.gitProfile.card-md{
+        box-shadow: none;
+}
+}

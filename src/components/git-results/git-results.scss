@@ -1,0 +1,39 @@
+git-results {
+    .gitUserGrid{
+        padding: 0px;
+    }
+    .gitUserBlock{
+        background: color($colors, secondary);
+        padding:0px;
+    }
+    .gitUserBlock .item-md, .item-ios{
+        background: none;
+    }
+    .gitUserBlock .item-md.item-block .item-inner, .item-ios.item-block .item-inner{
+        border: none;
+        background: none;
+    }
+    .gitUserName{
+        color: color($colors, white);
+        font-size: 30px;
+        font-weight: 500;
+    }
+    .gitUserLocation{
+        color: color($colors, white);
+        font-size: 18px;
+        font-weight: 100;
+    }
+    
+    .gitRepo.card-md{
+        box-shadow: none;
+    }
+    .gitRepoHeader{
+        background: color($colors, dark);
+        color: color($colors, white);
+        font-size: 20px;
+        font-weight: 400;
+    }
+    .gitRepoData .label{
+        border-bottom: 1px solid color($colors, dark);
+    }
+}

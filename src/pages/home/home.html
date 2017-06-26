@@ -1,0 +1,33 @@
+<ion-content padding >
+  <!--toolbar for user profile and bookmarks section -->
+  <ion-toolbar color="primary">
+    <ion-buttons left>
+  <!--opens user profile modal -->
+      <button ion-button icon-only color="secondary" (click)="gitSettings()">
+        <ion-icon name="cog"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+  <!--git'em grid for logo and user input-->
+  <ion-grid class="brandingWrapper">
+    <ion-row text-center>
+      <ion-col col-12 circleIcon>
+          <h1 class="logoText" text-center>Git'Em</h1>
+          <p text-center> powered by <img class="gitImg" src="../../assets/icon/git.png"></p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col margin text-center>
+        <ion-item class="userName">
+          <ion-input  type="text" placeholder="Enter Username" [(ngModel)]="inputName.title"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col margin text-center>
+    <!--Button that submits user input to api -->
+        <button ion-button col-11 color="dark" large text-center (click)="gitUserPage()" class="gitBtn">Git' {{inputName.title}}</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

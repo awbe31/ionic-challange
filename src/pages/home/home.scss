@@ -1,0 +1,41 @@
+page-home {
+/*Universal Styles*/
+    .brandingWrapper{
+        margin-top: 100px;
+        max-width: 900px;
+    }
+    .content-md {
+    background: color($colors, primary)
+    }
+    /*Fonts and Text*/
+    h1{
+        font-family: 'Bungee', cursive;
+        color: #D2E888;
+        font-size: 60px;
+        margin:5px;  
+    }
+    p{
+        color: #D2E888;
+        font-size: 20px;
+        margin:5px;
+    }
+    /*Input labels*/
+    .input-has-focus{
+        border-bottom: 0px solid color($colors, light);
+    }
+    .item-md.item-block .item-inner{
+        color: color($colors, dark);
+        border-bottom: 0px solid color($colors, light);
+    }
+    .userName{
+        background: color($colors, secondary)
+    }
+    /*Button*/
+    .gitBtn{
+        font-family: 'Bungee', cursive;
+    }
+    .gitImg{
+        width: 25%;
+        max-width: 75px;
+    }
+}
